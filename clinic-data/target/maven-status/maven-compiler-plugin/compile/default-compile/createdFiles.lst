@@ -1,5 +1,8 @@
-optic\framework\clinic\model\PetType.class
 optic\framework\clinic\model\Owner.class
+optic\framework\clinic\services\PetService.class
+optic\framework\clinic\model\PetType.class
+optic\framework\clinic\services\VetService.class
 optic\framework\clinic\model\Pet.class
 optic\framework\clinic\model\Vet.class
+optic\framework\clinic\services\OwnerService.class
 optic\framework\clinic\model\Person.class
