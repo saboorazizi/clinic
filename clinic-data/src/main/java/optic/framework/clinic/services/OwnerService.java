@@ -1,4 +1,4 @@
-package optic.framework.clinic.model.services;
+package optic.framework.clinic.services;
 
 import optic.framework.clinic.model.Owner;
 
