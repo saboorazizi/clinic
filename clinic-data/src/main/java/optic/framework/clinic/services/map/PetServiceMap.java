@@ -1,11 +1,11 @@
 package optic.framework.clinic.services.map;
 
 import optic.framework.clinic.model.Pet;
-import optic.framework.clinic.services.CrudService;
+import optic.framework.clinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapServices<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapServices<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
