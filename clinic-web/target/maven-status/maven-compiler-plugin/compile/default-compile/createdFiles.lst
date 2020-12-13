@@ -1,1 +1,5 @@
+optic\framework\clinic\bootstrap\DataLoader.class
+optic\framework\clinic\controllers\OwnersController.class
+optic\framework\clinic\controllers\IndexController.class
 optic\framework\clinic\ClinicApplication.class
+optic\framework\clinic\controllers\VetController.class
