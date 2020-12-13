@@ -2,9 +2,10 @@ package optic.framework.clinic.services.map;
 
 import optic.framework.clinic.model.Pet;
 import optic.framework.clinic.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class PetServiceMap extends AbstractMapServices<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {

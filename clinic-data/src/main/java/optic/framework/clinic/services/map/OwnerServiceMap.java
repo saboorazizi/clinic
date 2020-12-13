@@ -2,9 +2,11 @@ package optic.framework.clinic.services.map;
 
 import optic.framework.clinic.model.Owner;
 import optic.framework.clinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapServices<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {

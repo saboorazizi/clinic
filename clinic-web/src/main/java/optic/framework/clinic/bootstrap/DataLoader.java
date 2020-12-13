@@ -4,8 +4,6 @@ import optic.framework.clinic.model.Owner;
 import optic.framework.clinic.model.Vet;
 import optic.framework.clinic.services.OwnerService;
 import optic.framework.clinic.services.VetService;
-import optic.framework.clinic.services.map.OwnerServiceMap;
-import optic.framework.clinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,10 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader(){
-        //instantiate
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService){
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
     // implement methods
     @Override
