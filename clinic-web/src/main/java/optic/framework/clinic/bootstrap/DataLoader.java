@@ -1,6 +1,7 @@
 package optic.framework.clinic.bootstrap;
 
 import optic.framework.clinic.model.Owner;
+import optic.framework.clinic.model.Pet;
 import optic.framework.clinic.model.PetType;
 import optic.framework.clinic.model.Vet;
 import optic.framework.clinic.services.OwnerService;
@@ -8,6 +9,8 @@ import optic.framework.clinic.services.PetTypeService;
 import optic.framework.clinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -37,12 +40,32 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("2 Joy River Ct");
+        owner1.setCity("Sacramento");
+        owner1.setTelephone("518-555-2222");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+        owner1.getPets().add(mikesPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
+        owner2.setAddress("2 Joy River Ct");
+        owner2.setCity("Sacramento");
+        owner2.setTelephone("518-444-7777");
+
+        Pet fionasCat = new Pet();
+        fionasCat.setName("Just Cat");
+        fionasCat.setOwner(owner2);
+        fionasCat.setBirthDate(LocalDate.now());
+        fionasCat.setPetType(savedCatPetType);
+        owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
 
