@@ -1,30 +1,29 @@
 package optic.framework.clinic.services.map;
 
-import optic.framework.clinic.model.PetType;
-import optic.framework.clinic.services.PetTypeService;
+import optic.framework.clinic.model.Specialty;
+import optic.framework.clinic.services.SpecialitiesService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
 @Service
-public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
+public class SpecialityMapService extends AbstractMapService<Specialty, Long> implements SpecialitiesService {
     @Override
-    public Set<PetType> findAll() {
+    public Set<Specialty> findAll() {
         return super.findAll();
     }
 
     @Override
-    public PetType findById(Long id) {
+    public Specialty findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public PetType save(PetType object) {
+    public Specialty save(Specialty object) {
         return super.save(object);
     }
 
     @Override
-    public void delete(PetType object) {
+    public void delete(Specialty object) {
         super.delete(object);
     }
 
