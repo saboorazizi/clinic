@@ -1,4 +1,4 @@
-package optic.framework.clinic.model.repositories;
+package optic.framework.clinic.repositories;
 
 import optic.framework.clinic.model.Vet;
 import org.springframework.data.repository.CrudRepository;
