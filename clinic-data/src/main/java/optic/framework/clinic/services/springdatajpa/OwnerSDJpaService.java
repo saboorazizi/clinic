@@ -19,6 +19,7 @@ public class OwnerSDJpaService implements OwnerService {
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
 
+    // Spring Data JPA
     public OwnerSDJpaService(
             OwnerRepository ownerRepository,
             PetRepository petRepository,
