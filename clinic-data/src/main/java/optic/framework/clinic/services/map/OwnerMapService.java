@@ -5,11 +5,13 @@ import optic.framework.clinic.model.Pet;
 import optic.framework.clinic.services.OwnerService;
 import optic.framework.clinic.services.PetService;
 import optic.framework.clinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;

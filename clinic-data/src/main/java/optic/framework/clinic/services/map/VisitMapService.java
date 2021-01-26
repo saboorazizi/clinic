@@ -2,12 +2,13 @@ package optic.framework.clinic.services.map;
 
 import optic.framework.clinic.model.Visit;
 import optic.framework.clinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 @Service
+@Profile({"default", "map"})
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService {
-
     @Override
     public Set<Visit> findAll() {
         return super.findAll();
