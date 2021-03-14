@@ -59,7 +59,7 @@ class OwnersControllerTest {
     void findOwners() throws Exception {
         mockMvc.perform(get("/owners/find"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("notimplemented"));
+                .andExpect(view().name("owners/findOwners"));
         verifyNoInteractions(ownerService);
     }
 
@@ -70,8 +70,8 @@ class OwnersControllerTest {
                         Owner.builder().id(2l).build()));
 
         mockMvc.perform(get("/owners"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(view().name("redirect:owners/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owners/ownersList"))
                 .andExpect(model().attribute("selections", hasSize(2)));
     }
 
